@@ -9,10 +9,11 @@ const
     deleteusers
 
 } = require('../../controllers/users/UsersControllers');
+const {UserValidation} = require('../../controllers/users/validation/UserValidation');
 
 router.get('/', getallusers);
 router.get('/:id', getusersbyid);
-router.post('/insert', insertuser);
+router.post('/insert', UserValidation, insertuser);
 router.put('/update/:id', updateusers);
 router.delete('/delete/:id', deleteusers);
 

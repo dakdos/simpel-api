@@ -1,9 +1,9 @@
 const router        = require('express').Router();
 const {cekLogin}    = require('./../middleware/Auth')
-const auth          = require('./routerlist/auth');
-const category      = require('./routerlist/category');
-const post          = require('./routerlist/post');
-const users         = require('./routerlist/users');
+const auth          = require('./list/auth');
+const category      = require('./list/category');
+const post          = require('./list/post');
+const users         = require('./list/users');
 
 router.use('/category',cekLogin, category);
 router.use('/post', post);
@@ -12,7 +12,7 @@ router.use('/auth', auth);
 
 
 router.use('/', (req, res) => {
-    res.send('INDEX');
+    res.send('oke oke');
 })
 
 module.exports = router;

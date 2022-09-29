@@ -5,10 +5,6 @@ const user      = require('../../models/users/UsersModel');
 const getToken = async(req, res) =>{
     try {
         const userlogin = await user.GetUserlogin(req.body.email);
-        if(!userlogin){
-            res.json({error : 'gak ada data!'});
-            return false;            
-        }
         const token = jwt.sign(
             {
                 id          : userlogin.id,

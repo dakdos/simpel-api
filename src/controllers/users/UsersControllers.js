@@ -24,7 +24,7 @@ const getusersbyid = async(req, res) =>{
     }
 }
 
-const insertuser= async(req, res) =>{
+const insertuser= (req, res) =>{
     try {
         const postData = {
             fullName        : req.body.fullName,
@@ -41,7 +41,6 @@ const insertuser= async(req, res) =>{
             });
         })
     } catch (error) {
-        console.log(error);
         res.status(500).json({msg :error});
     }
 }
