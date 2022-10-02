@@ -8,7 +8,7 @@ const
     updatepost,
     deletepost
 
-} = require('../../controllers/post/PostControllers');
+} = require('../controllers/post/PostControllers');
 
 router.get('/', getallpost);
 router.get('/:id', getpostbyid);

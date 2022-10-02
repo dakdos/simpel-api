@@ -1,5 +1,5 @@
 const joi       = require('joi'); 
-const user      = require('../../../models/users/UsersModel');
+const user      = require('../models/users/UsersModel');
 
 const AuthLogin = joi.object({
     email : joi.required(),
@@ -9,6 +9,7 @@ const AuthLogin = joi.object({
 const AuthValidation = async (req, res, next) => {
     
     try {
+        
         const data = AuthLogin.validate(req.body);
         if (data.error) {
             return res.status(201).json({

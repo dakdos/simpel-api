@@ -8,8 +8,8 @@ const
     updateusers,
     deleteusers
 
-} = require('../../controllers/users/UsersControllers');
-const {UserValidation} = require('../../controllers/users/validation/UserValidation');
+} = require('../controllers/users/UsersControllers');
+const {UserValidation} = require('../validations/UserValidation');
 
 router.get('/', getallusers);
 router.get('/:id', getusersbyid);

@@ -8,7 +8,7 @@ const
     updatedtcategory,
     deletecategory
 
-} = require('../../controllers/category/CategoryControllers');
+} = require('../controllers/category/CategoryControllers');
 
 router.get('/', getallcategory);
 router.get('/:id', getcategorybyid);
